@@ -16,7 +16,7 @@ const TableRows = ({ users,deleteUserAction }) => {
     <div>
       <Table>
         <Table.ScrollContainer>
-          <Table.Content aria-label="Team members" className="min-w-[600px]">
+          <Table.Content aria-label="Team members" className="">
             <Table.Header>
               <Table.Column isRowHeader>Name</Table.Column>
               <Table.Column>Role</Table.Column>
@@ -47,7 +47,7 @@ const TableRows = ({ users,deleteUserAction }) => {
                             <AlertDialog.Header>
                               <AlertDialog.Icon status="danger" />
                               <AlertDialog.Heading>
-                                Delete project permanently?
+                                Delete user permanently?
                               </AlertDialog.Heading>
                             </AlertDialog.Header>
                             <AlertDialog.Body>
