@@ -3,3 +3,12 @@ export const  getUsers =async()=>{
     const data =await res.json()
     return data
 }
+
+
+
+export const getSingleUser =async(userId)=>{
+    const  res=await fetch(`http://localhost:5000/users/${userId}`)
+    const data =await res.json();
+    return data
+
+}
