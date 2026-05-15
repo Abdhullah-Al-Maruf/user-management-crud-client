@@ -1,6 +1,6 @@
 import AddUserModal from "@/component/AdduserModal";
 import TableRows from "@/component/table";
-import { deleteUser } from "@/lib/actions";
+import { createUser, deleteUser } from "@/lib/actions";
 import { getUsers } from "@/lib/data";
 const dataPage = async () => {
   const users = await getUsers();
@@ -10,7 +10,7 @@ const dataPage = async () => {
 
       <div className="flex justify-self-end mt-2 mb-5">
         <div></div>
-        <AddUserModal/>
+        <AddUserModal addUserAction={createUser}/>
       </div>
       <TableRows users={users} deleteUserAction={deleteUser} />
   
