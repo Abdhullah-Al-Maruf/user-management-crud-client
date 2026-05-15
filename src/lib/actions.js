@@ -23,9 +23,12 @@ const newUser = {
     },
     body: JSON.stringify(newUser),
   });
-  data = await res.json();
+const  data = await res.json();
 
   // todo : revalidate Path
+    if (data.insertedId) {
+    revalidatePath("/users");
+  }
   
   return data;
 };
